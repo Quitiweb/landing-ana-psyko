@@ -9,10 +9,12 @@
     --primary-color: #4A90A4;
     --secondary-color: #78B9CC;
     --accent-color: #F4A261;
+    --accent-hover: #E76F51;
     --text-dark: #2C3E50;
     --text-light: #5D6D7E;
     --bg-light: #F8F9FA;
     --white: #FFFFFF;
+    --border-light: #E0E0E0;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
@@ -138,7 +140,7 @@ html {
 }
 
 .btn-primary:hover {
-    background-color: #E76F51;
+    background-color: var(--accent-hover);
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
 }
@@ -341,7 +343,7 @@ section {
 .form-group input,
 .form-group textarea {
     padding: 12px;
-    border: 2px solid #E0E0E0;
+    border: 2px solid var(--border-light);
     border-radius: 5px;
     font-size: 1rem;
     transition: border-color 0.3s ease;
