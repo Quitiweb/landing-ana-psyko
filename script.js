@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // y avisamos en pantalla en lugar de perder el mensaje.
             if (action.includes('TU_ID_FORMSPREE') || action.trim() === '') {
                 e.preventDefault();
-                showFormMessage('El formulario aún no está conectado. Escríbenos a ana@anaruizromero.es mientras tanto.', 'error');
+                showFormMessage('El formulario aún no está conectado. Escríbenos a contacto@anaruizromero.com mientras tanto.', 'error');
                 return;
             }
 
@@ -58,10 +58,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     showFormMessage('¡Gracias! Tu mensaje se ha enviado correctamente. Te responderé lo antes posible.', 'success');
                     contactForm.reset();
                 } else {
-                    showFormMessage('Ha ocurrido un problema al enviar el mensaje. Puedes escribirme a ana@anaruizromero.es.', 'error');
+                    showFormMessage('Ha ocurrido un problema al enviar el mensaje. Puedes escribirme a contacto@anaruizromero.com.', 'error');
                 }
             } catch (err) {
-                showFormMessage('No se pudo conectar. Comprueba tu conexión o escríbeme a ana@anaruizromero.es.', 'error');
+                showFormMessage('No se pudo conectar. Comprueba tu conexión o escríbeme a contacto@anaruizromero.com.', 'error');
             } finally {
                 if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalText; }
             }
