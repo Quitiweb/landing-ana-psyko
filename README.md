@@ -52,7 +52,7 @@ El dominio `anaruizromero.es` está registrado en IONOS y apunta a GitHub Pages 
 
 ## Pendiente (TODO)
 
-- [ ] **Formulario de contacto:** crear una cuenta gratuita en [Formspree](https://formspree.io) y sustituir `TU_ID_FORMSPREE` en `index.html` por el ID real para que los mensajes lleguen al correo.
+- [x] **Formulario de contacto:** conectado a Formspree (`https://formspree.io/f/mpqevdae`). Los mensajes llegan a `contacto@anaruizromero.com`.
 - [ ] **Política de privacidad:** completar `privacidad.html` con los datos reales (NIF, dirección, nº de colegiada) y revisarla.
 - [ ] **Sobre mí:** sustituir el emoji por una foto real de Ana cuando esté disponible.
 - [ ] Confirmar que el buzón `contacto@anaruizromero.com` está operativo.
