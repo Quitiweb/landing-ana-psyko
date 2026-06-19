@@ -3,23 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ana Ruiz Romero - Psicóloga clínica en Málaga. Servicios profesionales de psicología para tu bienestar emocional y mental.">
-    <meta name="keywords" content="psicóloga, psicología, Málaga, terapia, salud mental, bienestar emocional">
-    <title>Ana Ruiz Romero - Psicóloga en Málaga</title>
+    <title>Ana Ruiz Romero | Psicóloga Clínica en Málaga</title>
+    <meta name="description" content="Ana Ruiz Romero, psicóloga clínica en Málaga. Terapia individual, de pareja y familiar, presencial y online, para tu bienestar emocional. Pide tu primera cita.">
+    <meta name="keywords" content="psicóloga Málaga, psicólogo Málaga, psicología clínica, terapia, ansiedad, depresión, terapia de pareja, terapia online">
+    <meta name="author" content="Ana Ruiz Romero">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://anaruizromero.es/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Ana Ruiz Romero · Psicóloga en Málaga">
+    <meta property="og:title" content="Ana Ruiz Romero | Psicóloga Clínica en Málaga">
+    <meta property="og:description" content="Terapia psicológica individual, de pareja y familiar en Málaga, presencial y online. Un espacio seguro para tu bienestar emocional.">
+    <meta property="og:url" content="https://anaruizromero.es/">
+    <meta property="og:image" content="https://anaruizromero.es/og-image.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ana Ruiz Romero | Psicóloga Clínica en Málaga">
+    <meta name="twitter:description" content="Terapia psicológica individual, de pareja y familiar en Málaga, presencial y online.">
+    <meta name="twitter:image" content="https://anaruizromero.es/og-image.png">
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Structured data: Psychologist / Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Psychologist",
+      "name": "Ana Ruiz Romero",
+      "description": "Psicóloga clínica en Málaga. Terapia individual, de pareja y familiar, presencial y online.",
+      "url": "https://anaruizromero.es/",
+      "email": "ana@anaruizromero.es",
+      "image": "https://anaruizromero.es/og-image.png",
+      "areaServed": {
+        "@type": "City",
+        "name": "Málaga"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Málaga",
+        "addressCountry": "ES"
+      },
+      "knowsLanguage": "es",
+      "priceRange": "€€",
+      "openingHours": "Mo-Fr 09:00-20:00",
+      "medicalSpecialty": "Psychiatric"
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">Ana Ruiz Romero</div>
+            <a href="/" class="nav-brand">Ana Ruiz Romero</a>
             <ul class="nav-menu">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="/blog/">Blog</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
-            <div class="nav-toggle" id="navToggle">
+            <div class="nav-toggle" id="navToggle" aria-label="Abrir menú" role="button" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -28,59 +75,60 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="inicio" class="hero">
+    <header id="inicio" class="hero">
         <div class="container">
             <div class="hero-content">
                 <h1>Ana Ruiz Romero</h1>
                 <h2>Psicóloga Clínica en Málaga</h2>
-                <p class="hero-subtitle">Te acompaño en tu camino hacia el bienestar emocional y mental</p>
+                <p class="hero-subtitle">Te acompaño en tu camino hacia el bienestar emocional y mental, con terapia presencial y online.</p>
                 <a href="#contacto" class="btn btn-primary">Solicitar Cita</a>
             </div>
         </div>
-    </section>
+    </header>
 
+    <main>
     <!-- Services Section -->
     <section id="servicios" class="services">
         <div class="container">
             <h2 class="section-title">Servicios de Psicología Clínica</h2>
             <p class="section-subtitle">Atención profesional personalizada para tu bienestar</p>
-            
+
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🧠</div>
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">🧠</div>
                     <h3>Terapia Individual</h3>
                     <p>Sesiones personalizadas para abordar ansiedad, depresión, estrés y otros desafíos emocionales.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">👥</div>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">👥</div>
                     <h3>Terapia de Pareja</h3>
                     <p>Mejora la comunicación y resuelve conflictos en tu relación de pareja con orientación profesional.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">👨‍👩‍👧‍👦</div>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">👨‍👩‍👧‍👦</div>
                     <h3>Terapia Familiar</h3>
                     <p>Fortalece los vínculos familiares y mejora la dinámica del hogar con terapia familiar.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">💭</div>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">💭</div>
                     <h3>Gestión Emocional</h3>
                     <p>Aprende a identificar, comprender y gestionar tus emociones de manera saludable.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">🎯</div>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">🎯</div>
                     <h3>Desarrollo Personal</h3>
                     <p>Alcanza tus metas y mejora tu autoestima con herramientas de crecimiento personal.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">🌟</div>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">🌟</div>
                     <h3>Tratamiento de Traumas</h3>
                     <p>Aborda experiencias difíciles del pasado con técnicas especializadas en trauma.</p>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -90,35 +138,76 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-image">
-                    <div class="image-placeholder">
+                    <div class="image-placeholder" aria-hidden="true">
                         <span>👩‍⚕️</span>
                     </div>
                 </div>
                 <div class="about-text">
                     <h2>Sobre mí</h2>
                     <p>Soy <strong>Ana Ruiz Romero</strong>, psicóloga clínica con vocación por el bienestar de las personas. Mi objetivo es proporcionar un espacio seguro y confidencial donde puedas explorar tus emociones, entender tus pensamientos y desarrollar herramientas para afrontar los desafíos de la vida.</p>
-                    
-                    <p>Con una formación especializada en psicología clínica y una amplia experiencia en el tratamiento de diversos trastornos emocionales, me dedico a ofrecer atención personalizada adaptada a las necesidades únicas de cada persona.</p>
-                    
+
+                    <p>Con una formación especializada en psicología clínica y experiencia en el tratamiento de diversos trastornos emocionales, me dedico a ofrecer atención personalizada adaptada a las necesidades únicas de cada persona, en Málaga y de forma online.</p>
+
                     <div class="about-features">
                         <div class="feature">
-                            <span class="feature-icon">✓</span>
+                            <span class="feature-icon" aria-hidden="true">✓</span>
                             <span>Psicóloga Colegiada</span>
                         </div>
                         <div class="feature">
-                            <span class="feature-icon">✓</span>
+                            <span class="feature-icon" aria-hidden="true">✓</span>
                             <span>Enfoque personalizado</span>
                         </div>
                         <div class="feature">
-                            <span class="feature-icon">✓</span>
+                            <span class="feature-icon" aria-hidden="true">✓</span>
                             <span>Ambiente confidencial</span>
                         </div>
                         <div class="feature">
-                            <span class="feature-icon">✓</span>
+                            <span class="feature-icon" aria-hidden="true">✓</span>
                             <span>Atención presencial y online</span>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog preview Section -->
+    <section id="blog" class="blog-preview">
+        <div class="container">
+            <h2 class="section-title">Desde el Blog</h2>
+            <p class="section-subtitle">Artículos sobre psicología clínica y bienestar emocional</p>
+
+            <div class="posts-grid">
+                <article class="post-card">
+                    <a href="/blog/cuando-ir-al-psicologo.html">
+                        <div class="post-card-tag">Bienestar</div>
+                        <h3>¿Cuándo acudir al psicólogo? Señales de que necesitas ayuda</h3>
+                        <p>Reconocer cuándo pedir ayuda profesional es el primer paso. Estas son las señales más habituales.</p>
+                        <span class="post-card-link">Leer artículo →</span>
+                    </a>
+                </article>
+
+                <article class="post-card">
+                    <a href="/blog/como-gestionar-la-ansiedad.html">
+                        <div class="post-card-tag">Ansiedad</div>
+                        <h3>Ansiedad: síntomas, causas y cómo gestionarla</h3>
+                        <p>Qué es la ansiedad, por qué aparece y estrategias prácticas para gestionarla en tu día a día.</p>
+                        <span class="post-card-link">Leer artículo →</span>
+                    </a>
+                </article>
+
+                <article class="post-card">
+                    <a href="/blog/terapia-de-pareja-cuando-acudir.html">
+                        <div class="post-card-tag">Pareja</div>
+                        <h3>Terapia de pareja: cuándo acudir y qué esperar</h3>
+                        <p>Señales de que la terapia de pareja puede ayudaros y cómo es el proceso paso a paso.</p>
+                        <span class="post-card-link">Leer artículo →</span>
+                    </a>
+                </article>
+            </div>
+
+            <div class="blog-preview-cta">
+                <a href="/blog/" class="btn btn-secondary">Ver todos los artículos</a>
             </div>
         </div>
     </section>
@@ -128,68 +217,74 @@
         <div class="container">
             <h2 class="section-title">Contacto</h2>
             <p class="section-subtitle">¿Necesitas ayuda? Estoy aquí para acompañarte</p>
-            
+
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-card">
-                        <div class="contact-icon">📍</div>
+                        <div class="contact-icon" aria-hidden="true">📍</div>
                         <h3>Ubicación</h3>
                         <p>Málaga, España</p>
                     </div>
-                    
+
                     <div class="contact-card">
-                        <div class="contact-icon">📧</div>
+                        <div class="contact-icon" aria-hidden="true">📧</div>
                         <h3>Email</h3>
-                        <p><a href="mailto:ana@psicologia.com">ana@psicologia.com</a></p>
+                        <p><a href="mailto:ana@anaruizromero.es">ana@anaruizromero.es</a></p>
                     </div>
-                    
+
                     <div class="contact-card">
-                        <div class="contact-icon">📱</div>
-                        <h3>Teléfono</h3>
-                        <p><a href="tel:+34600000000">+34 600 000 000</a></p>
+                        <div class="contact-icon" aria-hidden="true">💻</div>
+                        <h3>Modalidad</h3>
+                        <p>Presencial y online</p>
                     </div>
-                    
+
                     <div class="contact-card">
-                        <div class="contact-icon">🕐</div>
+                        <div class="contact-icon" aria-hidden="true">🕐</div>
                         <h3>Horario</h3>
                         <p>Lunes a Viernes<br>9:00 - 20:00</p>
                     </div>
                 </div>
-                
+
                 <div class="contact-form-container">
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/TU_ID_FORMSPREE" method="POST">
                         <div class="form-group">
                             <label for="name">Nombre completo</label>
                             <input type="text" id="name" name="name" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" required>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Teléfono</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        
+
                         <div class="form-group">
                             <label for="message">Mensaje</label>
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
-                        
+
+                        <div class="form-group form-check">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">He leído y acepto la <a href="/privacidad.html">política de privacidad</a>.</label>
+                        </div>
+
                         <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Ana Ruiz Romero - Psicóloga Clínica en Málaga. Todos los derechos reservados.</p>
-            <p class="footer-note">La información proporcionada en este sitio web no sustituye una consulta profesional.</p>
+            <p>&copy; 2026 Ana Ruiz Romero · Psicóloga Clínica en Málaga. Todos los derechos reservados.</p>
+            <p class="footer-links">
+                <a href="/blog/">Blog</a> ·
+                <a href="/privacidad.html">Política de privacidad</a> ·
+                <a href="mailto:ana@anaruizromero.es">ana@anaruizromero.es</a>
+            </p>
+            <p class="footer-note">La información de este sitio web es de carácter divulgativo y no sustituye una consulta profesional.</p>
         </div>
     </footer>
 

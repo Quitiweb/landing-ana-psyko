@@ -25,26 +25,60 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Contact Form Submission
+    // Contact Form Submission (via Formspree)
+    // Reemplaza TU_ID_FORMSPREE en el atributo action del <form> por tu ID real
+    // de https://formspree.io para que los mensajes lleguen al correo de Ana.
     const contactForm = document.getElementById('contactForm');
-    
+
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
+            const action = contactForm.getAttribute('action') || '';
+
+            // Si Formspree no está configurado todavía, evitamos el envío real
+            // y avisamos en pantalla en lugar de perder el mensaje.
+            if (action.includes('TU_ID_FORMSPREE') || action.trim() === '') {
+                e.preventDefault();
+                showFormMessage('El formulario aún no está conectado. Escríbenos a ana@anaruizromero.es mientras tanto.', 'error');
+                return;
+            }
+
             e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const message = document.getElementById('message').value;
-            
-            // Here you would typically send the data to a server
-            // For now, we'll just show an alert
-            alert(`Gracias ${name}! Tu mensaje ha sido recibido. Te contactaremos pronto al correo ${email}.`);
-            
-            // Reset form
-            contactForm.reset();
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn ? submitBtn.textContent : '';
+            if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Enviando…'; }
+
+            try {
+                const response = await fetch(action, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    showFormMessage('¡Gracias! Tu mensaje se ha enviado correctamente. Te responderé lo antes posible.', 'success');
+                    contactForm.reset();
+                } else {
+                    showFormMessage('Ha ocurrido un problema al enviar el mensaje. Puedes escribirme a ana@anaruizromero.es.', 'error');
+                }
+            } catch (err) {
+                showFormMessage('No se pudo conectar. Comprueba tu conexión o escríbeme a ana@anaruizromero.es.', 'error');
+            } finally {
+                if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalText; }
+            }
         });
+    }
+
+    function showFormMessage(text, type) {
+        let box = document.getElementById('formMessage');
+        if (!box) {
+            box = document.createElement('div');
+            box.id = 'formMessage';
+            box.className = 'form-message';
+            contactForm.appendChild(box);
+        }
+        box.textContent = text;
+        box.classList.remove('success', 'error');
+        box.classList.add(type);
     }
 
     // Smooth scroll enhancement

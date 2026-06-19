@@ -145,6 +145,19 @@ html {
     box-shadow: var(--shadow-lg);
 }
 
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
 /* Sections */
 section {
     padding: 80px 0;
@@ -466,5 +479,308 @@ section {
 
     section {
         padding: 60px 0;
+    }
+}
+
+/* ===== Form extras ===== */
+.form-check {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.6rem;
+}
+
+.form-check input {
+    margin-top: 0.25rem;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.form-check label {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.form-check a {
+    color: var(--primary-color);
+}
+
+.form-message {
+    margin-top: 0.5rem;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.form-message.success {
+    background-color: #E6F4EA;
+    color: #1E7E34;
+    border: 1px solid #B7E1C1;
+}
+
+.form-message.error {
+    background-color: #FDECEA;
+    color: #B02A37;
+    border: 1px solid #F5C2C7;
+}
+
+/* ===== Blog preview (home) ===== */
+.blog-preview {
+    background-color: var(--white);
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.post-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.post-card > a {
+    display: block;
+    padding: 1.8rem;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+}
+
+.post-card-tag {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 12px;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.post-card h3 {
+    color: var(--text-dark);
+    font-size: 1.25rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+.post-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.post-card-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.blog-preview-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* ===== Blog index page ===== */
+.page-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--white);
+    padding: 130px 0 70px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 2.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-hero p {
+    font-size: 1.15rem;
+    opacity: 0.95;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.blog-list {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+}
+
+.blog-list .posts-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+/* ===== Breadcrumbs ===== */
+.breadcrumbs {
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.breadcrumbs a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Article (single post) ===== */
+.article {
+    padding: 40px 0 80px;
+    background-color: var(--white);
+}
+
+.article-container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.article-header {
+    margin-bottom: 2.5rem;
+}
+
+.article-header .post-card-tag {
+    background-color: var(--accent-color);
+}
+
+.article-header h1 {
+    font-size: 2.3rem;
+    color: var(--text-dark);
+    line-height: 1.25;
+    margin: 0.8rem 0;
+}
+
+.article-meta {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.article-body {
+    font-size: 1.08rem;
+    color: #34404D;
+    line-height: 1.85;
+}
+
+.article-body h2 {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    margin: 2.2rem 0 1rem;
+}
+
+.article-body h3 {
+    color: var(--text-dark);
+    font-size: 1.25rem;
+    margin: 1.6rem 0 0.8rem;
+}
+
+.article-body p {
+    margin-bottom: 1.3rem;
+}
+
+.article-body ul,
+.article-body ol {
+    margin: 0 0 1.3rem 1.4rem;
+}
+
+.article-body li {
+    margin-bottom: 0.6rem;
+}
+
+.article-body strong {
+    color: var(--text-dark);
+}
+
+.article-body a {
+    color: var(--primary-color);
+}
+
+.article-body blockquote {
+    border-left: 4px solid var(--secondary-color);
+    background: var(--bg-light);
+    padding: 1rem 1.4rem;
+    margin: 1.6rem 0;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    color: var(--text-light);
+}
+
+.disclaimer-box {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-light);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 0 8px 8px 0;
+    padding: 1.2rem 1.4rem;
+    margin: 2.5rem 0;
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+.disclaimer-box strong {
+    color: var(--text-dark);
+}
+
+.article-cta {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--white);
+    border-radius: 12px;
+    padding: 2.2rem;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.article-cta h3 {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+}
+
+.article-cta p {
+    margin-bottom: 1.4rem;
+    opacity: 0.95;
+}
+
+/* ===== Related posts ===== */
+.related-posts {
+    background-color: var(--bg-light);
+    padding: 60px 0;
+}
+
+.related-posts h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .page-hero h1 {
+        font-size: 2rem;
+    }
+
+    .article-header h1 {
+        font-size: 1.7rem;
+    }
+
+    .article-body {
+        font-size: 1rem;
     }
 }
